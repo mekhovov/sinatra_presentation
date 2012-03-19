@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!--
+Copyright 2011 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Author: Eric Bidelman (ericbidelman@chromium.org)
+        Arne Roomann-Kurrik (kurrik@chromium.org)
+-->
+<html>
+<head>
+  <title>Sinatra: Sing with me this ditty</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="css/prettify.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet/less" type="text/css" href="css/slide-presentation.less">
+  <link rel="stylesheet/less" type="text/css" href="css/slide-content.less">
+</head>
+  <body>
+    <script type="text/html">
+      <!DOCTYPE html>
+      <html>
+        <style>h1 { font:18pt Arial; color: #ccc; text-align: center; }</style>
+        <body>
+          <h1>loading...</h1>
+        </body>
+      </html>
+    </script>
+
+    <div id="content" class="hidden">
+      <div id="bg-pattern" class="background"></div>
+      <div id="bg-white" class="background"></div>
+      <div id="bg-black" class="background"></div>
+      <div id="bg-google-blue" class="background"></div>
+      <div id="bg-blueprint" class="background"></div>
+      <div id="bg-google-darkblue" class="background"></div>
+      <div id="bg-google-green" class="background"></div>
+      <div id="bg-google-yellow" class="background"></div>
+      <div id="bg-google-red" class="background"></div>
+      <div id="bg-binary" class="background"></div>
+      <div id="bg-file" class="background"></div>
+      <div id="bg-clutter" class="background"></div>
+      <div id="bg-filecabinets" class="background"></div>
+      <div id="bg-audio" class="background"></div>
+      <div id="bg-declarative" class="background"></div>
+      <div id="bg-drawline" class="background"></div>
+      <div id="bg-degree" class="background"></div>
+
+      <div id="slide002_bg" class="background"></div>
+      <div id="bg-ruby" class="background"></div>
+      <div id="bg-ror" class="background"></div>
+      <div id="bg-history" class="background"></div>
+      <div id="bg-japan_vs_usa" class="background"></div>
+      <div id="bg_striped_blue" class="background"></div>
+      <div id="bg_striped_violet" class="background"></div>
+      <div id="bg_striped_grey" class="background"></div>
+
+<div id="bg_ruby_what_is" class="background"></div>
+<div id="bg_ruby_light" class="background"></div>
+<div id="bg_ruby_functional" class="background"></div>
+<div id="bg_ruby_elegant" class="background"></div>
+<div id="bg_ruby_dynamic" class="background"></div>
+<div id="bg_ruby_reflective" class="background"></div>
+<div id="bg_ruby_os" class="background"></div>
+<div id="bg_ruby_flexible" class="background"></div>
+<div id="bg_ruby_language" class="background"></div>
+<div id="bg_ruby_what_is_2" class="background"></div>
+
+<div id="bg_ror_1" class="background"></div>
+<div id="bg_scene" class="background"></div>
+
+
+<!=========================================== The Beginning ===================================================
+ *
+ * Let's Go, Slides
+ *
+-->
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * slide001 | Preflight
+ *
+-->
+<div class="slide transparent centercontents" id="slide-preflight"  data-backgroundid="bg_striped_blue">
+  <section class="white_text">
+    <h2>Preflight</h2>
+    <div id="browser-webkit" class="hidden good feature">
+      <div><img src='images/icons/ok.png'/> Webkit</div>
+    </div>
+    <div id="browser-mozilla" class="hidden warning feature">
+      <div><img src='images/icons/warning.png'/> Mozilla</div>
+      <div class="explanation">
+        You are running a Mozilla browser.  While such browsers generally have
+        excellent support for HTML5 features, this presentation has only
+        been tested using WebKit browsers such as
+        <a href="http://www.google.com/chrome">Google Chrome</a> or
+        <a href="http://www.apple.com/safari/">Safari</a>.
+        You should still be able to navigate the slides by using left/right
+        arrow keys, but will currently see display errors with regard
+        to the 3d rendering of the slides and some demo content.
+      </div>
+    </div>
+    <div id="browser-other" class="hidden bad feature">
+      <div><img src='images/icons/error.png'/> Other browser</div>
+      <div class="explanation">
+        You are running a browser that has not been tested with this
+        presentation.  You may not be able to run some or all of the samples
+        listed here.  While we want to add support for as many browsers as
+        possible, currently we only support WebKit-based browsers such as
+        <a href="http://www.google.com/chrome">Google Chrome</a> or
+        <a href="http://www.apple.com/safari/">Safari</a>.
+      </div>
+    </div>
+    <div id="feature-webgl" class="hidden good feature">
+      <div><img src='images/icons/ok.png'/> WebGL: available</div>
+    </div>
+    <div id="feature-no-webgl" class="hidden bad feature">
+      <div><img src='images/icons/error.png'/> WebGL: not supported</div>
+      <div class="explanation">
+        You will not be able to see the WebGL demos later in this slide deck.
+      </div>
+    </div>
+    <div id="feature-notification" class="hidden">
+      <div id="notification-on" class='hidden warning feature'>
+        <div><img src='images/icons/warning.png'/> Notification permission incorrect</div>
+        <div class="explanation">
+          You have granted permission for this page to show notifications.
+          If you intended to demo the request permission functionality, you
+          may want to clear this permission by clicking
+          <a href="javascript:resetNotifications();">here</a> and removing
+          the permission.
+        </div>
+      </div>
+      <div id="notification-off" class='hidden good feature'>
+        <div><img src='images/icons/ok.png'/> Notification permission correct</div>
+      </div>
+    </div>
+    <div id="feature-no-notification" class="hidden bad feature">
+      <div><img src='images/icons/error.png'/> No notification</div>
+      <div class="explanation">
+        Your browser does not support displaying notifications.  Currently,
+        only <a href="http://www.google.com/chrome">Google Chrome</a>
+        will support this functionality.
+      </div>
+    </div>
+    <div id="feature-file" class="hidden good feature">
+      <div><img src='images/icons/ok.png'/> File APIs: available</div>
+    </div>
+    <div id="feature-no-file" class="hidden bad feature">
+      <div><img src='images/icons/error.png'/> File APIs are not supported</div>
+      <div class="explanation">
+        Your browser does not support one or more of the following APIs:
+        <code>File</code>, <code>FileList</code>, <code>FileReader</code>.
+      </div>
+    </div>
+    <div id="feature-filesystem" class="hidden good feature">
+      <div><img src='images/icons/ok.png'/> File System API: available</div>
+    </div>
+    <div id="feature-no-filesystem" class="hidden bad feature">
+      <div><img src='images/icons/error.png'/> File System API: not supported</div>
+      <div class="explanation">
+        Your browser does not support the File System API for
+        reading/writing files and directories.
+      </div>
+    </div>
+    <div id="feature-filesystem-quota" class="hidden warning feature">
+      <div><img src='images/icons/warning.png'/> File System API: partial support</div>
+      <div class="explanation">
+        The File System API are available in your browser, but write access is
+        unavailable. Are you running Google Chrome with the <code>--unlimited-quota-for-files</code> flag?
+      </div>
+    </div>
+    <div id="feature-web-audio" class="hidden good feature">
+      <div><img src='images/icons/ok.png'/> Web Audio API: available</div>
+    </div>
+    <div id="feature-no-web-audio" class="hidden bad feature">
+      <div><img src='images/icons/error.png'/> Web Audio API: not supported</div>
+      <div class="explanation">
+        Your browser does not support the <a href="http://chromium.googlecode.com/svn/trunk/samples/audio/specification/specification.html" target="_blank">Web Audio API</a>.
+        If using Google Chrome, you need Mac OSX and to enable the API in <code>about:flags</code>.
+      </div>
+    </div>
+  </section>
+  <section class="white_text">
+        <br><br><br><br>
+      If things look good, press <span class="key">→</span> to move on.
+  </section>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * Controls
+ *
+-->
+<div class="slide transparent segue centercontents" data-backgroundid="slide002_bg">
+  <aside class="note white_text">
+    <section>
+      Welcome! (This field is for presenter notes and commentary.)
+    </section>
+  </aside>
+  <section class="white_text">
+    <h2>Controls</h2>
+    <ul>
+      <li>Space or <span class="key">&larr;</span> / <span class='key'>&rarr;</span> to move around</li>
+      <li><span class="key">Ctrl/Command</span> / <span class='key'>–</span> or <span class='key'>+</span> to zoom in and out if slides don’t fit</li>
+      <li><span class="key">N</span> to show/hide speaker notes</li>
+      <li><span class="key">H</span> to highlight important elements in code snippets</li>
+    </ul>
+  </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * Title
+ *
+-->
+<div class="slide centercontents centertext" id="slide-title" data-backgroundid="bg-pattern">
+  <h1>Sinatra: Sing with me this ditty</h1>
+  <section>
+    <img src="images/sinatra_logo.png" style="width:550px;margin-top:-50px">
+  </section>
+  <section>
+    <!-- <strong>Not</strong> a <strong>boooring</strong> presentation about <strong>Ruby</strong> and <strong>Ruby on Rails</strong><br> -->
+  </section>
+ 
+</div>
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * Today's Agenda
+ *
+-->
+<div class="slide centercontents" id="slide-agenda" data-backgroundid="bg-pattern">
+  <header>Today's agenda</header>
+  <section>
+    <div class="item">
+      <img src="images/ico_sinatra.png" />
+      <span class="redtheme"><b>Sinatra</b> Up and Running</span>
+    </div>
+    <div class="item">
+      <img src="images/ico_sinatra.png" />
+      <span class="yellowtheme"><b>Deploy</b> your project in a min</span>
+    </div>
+    <div class="item">
+      <img src="images/ico_sinatra.png" />
+      <span class="grintheme"><b>ORM?!</b> It's easy</span>
+    </div>
+    <div class="item">
+      <img src="images/ico_sinatra.png" />
+      <span class="bluetheme"><b>NoSQL</b> - no Problem</span>
+    </div>
+
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!=========================================== The End ===================================================
+ *
+ * No more Slides
+ *
+-->
+
+    </div>
+    <div id="overlay"></div>
+
+    <script src="js/libs/less-1.0.41.min.js" async></script>
+    <script src="js/prettify/prettify.js" async></script>
+    <script src="js/libs/glMatrix-0.9.5.min.js" async></script>
+    <script src="js/config.js" defer></script>
+    <!--<script src="socket.io/socket.io.js" defer></script>-->
+    <script src="js/libs/yepnope.1.0.1-min.js" defer></script>
+    <script src="js/slide-presentation.js" defer></script>
+    <script src="js/slide-content.js" defer></script>
+
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23384572-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!--[if IE]>
+    <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+    <![endif]-->
+    <div id="background"></div>
+    <div id="stage"></div>
+  </body>
+</html>
+
