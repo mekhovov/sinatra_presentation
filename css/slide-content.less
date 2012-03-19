@@ -270,6 +270,10 @@
   background: url('/images/20p-black.png') repeat, url('/images/japan_vs_usa.png');
 }
 
+#bg_01 {
+  .background-size(stretch);
+  background: url('/images/bg_01.png');
+}
 #bg_striped_blue {
   .background-size(stretch);
   background: url('/images/bg_striped_blue.jpg');
@@ -1523,3 +1527,26 @@ header {
   .text-shadow(none);
   color: black;
 }
+
+/* Typography
+---------------------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Ayita Pro SemiBold";
+  src: url('../fonts/AyitaPro-SemiBold.eot');
+}
+
+@font-face {
+  font-family: "Ayita Pro SemiBold";
+  src: url('../fonts/AyitaPro-SemiBold.ttf') format("truetype");
+}  
+
+@font-face {
+  font-family: "museo_slab";
+  src: url('../fonts/museo_slab_300-webfont.eot');
+}
+
+@font-face {
+  font-family: "museo_slab";
+  src: url('../fonts/museo_slab_300-webfont.ttf') format("truetype");
+} 

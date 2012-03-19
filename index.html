@@ -22,6 +22,7 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
   <title>Sinatra: Sing with me this ditty</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/prettify.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet/less" type="text/css" href="css/slide-presentation.less">
@@ -62,6 +63,7 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
       <div id="bg-ror" class="background"></div>
       <div id="bg-history" class="background"></div>
       <div id="bg-japan_vs_usa" class="background"></div>
+      <div id="bg_01" class="background"></div>
       <div id="bg_striped_blue" class="background"></div>
       <div id="bg_striped_violet" class="background"></div>
       <div id="bg_striped_grey" class="background"></div>
@@ -92,7 +94,7 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
  * slide001 | Preflight
  *
 -->
-<div class="slide transparent centercontents" id="slide-preflight"  data-backgroundid="bg_striped_blue">
+<div class="slide transparent centercontents" id="slide-preflight"  data-backgroundid="bg_01">
   <section class="white_text">
     <h2>Preflight</h2>
     <div id="browser-webkit" class="hidden good feature">
@@ -193,7 +195,6 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
     </div>
   </section>
   <section class="white_text">
-        <br><br><br><br>
       If things look good, press <span class="key">→</span> to move on.
   </section>
   <br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -205,12 +206,14 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
  * Controls
  *
 -->
-<div class="slide transparent segue centercontents" data-backgroundid="slide002_bg">
+<div class="slide transparent segue centercontents" data-backgroundid="bg_01">
+  <!-- notes -->
   <aside class="note white_text">
     <section>
       Welcome! (This field is for presenter notes and commentary.)
     </section>
   </aside>
+  <!-- notes -->
   <section class="white_text">
     <h2>Controls</h2>
     <ul>
@@ -230,16 +233,23 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
  * Title
  *
 -->
-<div class="slide centercontents centertext" id="slide-title" data-backgroundid="bg-pattern">
-  <h1>Sinatra: Sing with me this ditty</h1>
-  <section>
-    <img src="images/sinatra_logo.png" style="width:550px;margin-top:-50px">
-  </section>
-  <section>
-    <!-- <strong>Not</strong> a <strong>boooring</strong> presentation about <strong>Ruby</strong> and <strong>Ruby on Rails</strong><br> -->
-  </section>
- 
+
+<div class="slide transparent image" data-backgroundid="bg_scene">
+  <!-- TODO: fix image, add some text -->
+  <span style="margin-left:250px">
+  </span>
+  <div data-build>
+    <section data-auto style="background:none">
+    <span style="margin-left:300px">
+    <img src="images/ico_sinatra.png" style="width:350px;margin-top:10px">
+    </span>
+      <h1 style="margin-left:150px;width:700px;font-size:50px;font-family:'Bad Script';">Sinatra: Sing with me this ditty</h1>
+    </section>
+  </div>
 </div>
+
+
+
 
 
 <!--------------------------------------- Slide  -------------------------------------------------------
@@ -248,6 +258,13 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
  *
 -->
 <div class="slide centercontents" id="slide-agenda" data-backgroundid="bg-pattern">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: fix agenda, colors. Add icons
+    </section>
+  </aside>
+  <!-- notes -->
   <header>Today's agenda</header>
   <section>
     <div class="item">
@@ -264,7 +281,7 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
     </div>
     <div class="item">
       <img src="images/ico_sinatra.png" />
-      <span class="bluetheme"><b>NoSQL</b> - no Problem</span>
+      <span class="bluetheme"><b>NoSQL</b> - icoNo Problem</span>
     </div>
 
   </section>
