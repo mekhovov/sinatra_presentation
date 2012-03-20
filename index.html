@@ -323,13 +323,419 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
   <section >
     <div style="font-size:110%; color:#fff">
       <h1>Sinatra is a <span class="mark_yellow">Ruby</span> <span class="mark_red">DSL</span>,</h1>
-      <h1> <span class="mark_red">micro</span> <span class="mark_purple">framework</span> </h1>
+      <h1> <span class="mark_red">micro</span> <span class="mark_purple">framework</span></h1>
+      <h1>for <span class="mark_yellow">quickly</span> creating </h1>
+      <h1><span class="mark_red">web</span> applications</h1>
+      <h1> with minimal effort</h1>
       <!-- <h1><span class="mark_green">object-oriented</span>, <span class="mark_yellow">scripting</span></h1>
       <h1>(and slightly <span class="mark_blue">functional</span>) </h1>
       <h1><span class="mark_yellow">open-source</span>   programming language</h1>
       <h1>with <span class="mark_red">elegant</span>, <span class="mark_green">flexible syntax.</span></h1> -->
     </div>
   </section>
+</div>
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * About Sinatra
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>About Sinatra</header>
+  <section>
+    <ul class="large">
+      <li>Single file web-app</li>
+      <li>Runs on <span class="mark_yellow">Rack</span></li>
+      <li>Your choice of <span class="mark_blue">Template Engine</span></li>
+      <li>Your choice of <span class="mark_red">JavaScript library</span></li>
+      <li>Your choice of <span class="mark_yellow">ORM</span></li>
+
+    </ul>
+  </section>
+</div>
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Up and Running
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Up and Running</header>
+  <section>
+<pre style="font-size:22px">
+# ditty.rb
+
+require 'sinatra'
+
+get '/' do
+  'Sing with me!'
+end
+</pre>
+</section>
+
+<section data-build>
+<pre style="font-size:22px">
+$ gem install sinatra
+</pre>
+</section>
+
+<section data-build>
+<pre style="font-size:22px">
+$ ruby ditty.rb
+</pre>
+</section>
+</div>
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Go to Browser
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add screenshot
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Go to browser</header>
+  <section>
+    screen shot goes here...
+  </section>
+</div>
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Routes
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Routes</header>
+  <section>
+<pre style="font-size:22px">
+<b>get</b> '/' do
+  .. show something ..
+end
+</pre>
+
+<pre style="font-size:22px">
+<b>post</b> '/' do
+  .. create something ..
+end
+</pre>
+
+<pre style="font-size:22px">
+<b>put</b> '/' do
+  .. replace something ..
+end
+</pre>
+
+<pre style="font-size:22px">
+<b>delete</b> '/' do
+  .. annihilate something ..
+end
+</pre>
+
+  </section>
+</div>
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Custom Routes
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Custom Routes</header>
+  <section>
+<pre style="font-size:22px">
+get '/hello/<b>:name</b>' do
+  "Hello #{params[<b>:name</b>]}!"
+end
+
+# matches "GET /hello/foo</b>" and "GET /hello/bar>"
+# params[:name] is 'foo' or 'bar'
+</pre>
+</section>
+
+<section data-build>
+<pre style="font-size:22px">
+get '/say/<b>*</b>/to/<b>*</b>/download/<b>*.*</b>' do
+  params[:splat] # => ["<b>hello</b>", "<b>world</b>, <b>path/to/file</b>", "<b>xml</b>"]
+end
+# matches /say/hello/to/world/download/path/to/file.xml
+</pre>
+</section>
+
+<section data-build>
+<pre style="font-size:22px">
+get '/posts.?<b>:format?</b>', <b>:provides => ['rss', 'atom', 'xml']</b> do
+  # matches "GET /posts" and any extension "GET /posts.json", "GET /posts.xml"..
+end
+</pre>
+</section>
+
+</div>
+
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Static files
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Static files</header>
+  <section>
+<pre style="font-size:22px">
+# ditty.rb
+
+require 'sinatra'
+
+# by ./public dir
+set :public_folder, File.dirname(__FILE__) + '/static' 
+
+get '/' do
+  File.read('static/index.html')
+end
+</pre>
+</section>
+
+<section data-build>
+<pre style="font-size:22px">
+http://example.com/css/style.css
+</pre>
+<pre style="font-size:22px">
+./static/css/style.css 
+</pre>
+</section>
+
+</div>
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Views / Templates
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Views / Templates</header>
+  <section>
+    text goes here...
+  </section>
+
+</div>
+
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Available Template Languages
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Available Template Languages</header>
+  <section>
+    text goes here...
+  </section>
+
+</div>
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Filters
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Filters</header>
+  <section>
+    text goes here...
+  </section>
+
+</div>
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Helpers
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Helpers</header>
+  <section>
+    text goes here...
+  </section>
+
+</div>
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Configuration
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Configuration</header>
+  <section>
+    text goes here...
+  </section>
+
+</div>
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Error Handling
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Error Handling</header>
+  <section>
+    text goes here...
+  </section>
+
+</div>
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Rack Middleware
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Rack Middleware</header>
+  <section>
+    text goes here...
+  </section>
+
+</div>
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Testing
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Testing</header>
+  <section>
+    text goes here...
+  </section>
+
 </div>
 
 
