@@ -242,7 +242,7 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
   <div data-build>
     <section data-auto style="background:none">
     <span style="margin-left:300px">
-    <img src="images/ico_sinatra.png" style="width:350px;margin-top:10px">
+      <img src="images/ico_sinatra.png" style="width:350px;margin-top:10px">
     </span>
       <h1 style="margin-left:150px;width:700px;font-size:50px;font-family:'Bad Script';">Sinatra: Sing with me this ditty</h1>
     </section>
@@ -270,7 +270,11 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
   <section>
     <div class="item">
       <img src="images/ico_sinatra.png" />
-      <span class="redtheme"><b>Sinatra</b> Up and Running</span>
+      <span class="redtheme"><b>Sinatra</b> about</span>
+    </div>
+    <div class="item">
+      <img src="images/ico_sinatra.png" />
+      <span class="purpletheme"><b>Site</b> Up and Running</span>
     </div>
     <div class="item">
       <img src="images/ico_sinatra.png" />
@@ -296,7 +300,7 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
  * TOPIC 1: Sinatra: up and running
  *
 -->
-<div class="slide transparent image" data-backgroundid="bg_homer">
+<div class="slide transparent image" data-backgroundid="bg_linen">
   <div data-build>
     <section class="bottomWide dark" data-auto>
       <h1>Sinatra: Up and Running</h1>
@@ -327,6 +331,7 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
       <h1>for <span class="mark_yellow">quickly</span> creating </h1>
       <h1><span class="mark_red">web</span> applications</h1>
       <h1> with minimal effort</h1>
+      <h1><a href='http://sinartarb.com'>http://sinartarb.com</a></h1>
     </div>
   </section>
 </div>
@@ -412,7 +417,7 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
   <!-- notes -->
   <section >
     <div style="font-size:160%; color:#fff">
-      <h1><span class="mark_red">REST-full</span> <span class="mark_yellow">HTTP</span> <span class="mark_green">Actions</span> <span class="mark_blue">!</span></h1>
+      <h1><span class="mark_red">RESTful</span> <span class="mark_yellow">HTTP</span> <span class="mark_green">Actions</span> <span class="mark_blue">!</span></h1>
     </div>
   </section>
 </div>
@@ -429,6 +434,9 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
   <aside class="note white_text">
     <section>
       TODO: add info
+throw that in a file
+install gem
+run it
       shotgun ?
     </section>
   </aside>
@@ -445,7 +453,6 @@ get '/' do
 end
 </pre>
 </section>
-
 <section data-build>
 <pre style="font-size:36px">
 $ gem install sinatra
@@ -459,6 +466,7 @@ $ gem install shotgun
 </section> -->
 
 <section data-build>
+
 <pre style="font-size:36px">
 $ ruby ditty.rb
 </pre>
@@ -504,6 +512,9 @@ $ ruby ditty.rb
   <!-- notes -->
   <section >
     <div style="font-size:120%; color:#fff">
+      <span style="margin-left:60px">
+        <img src="images/sinatra_rock.png" style="width:750px;margin-top:-70px">
+      </span>
       <h1>Yep, it's <span class="mark_yellow">Whole</span> <span class="mark_red">WEB</span> <span class="mark_green">Application</span> o_O</h1>
     </div>
   </section>
@@ -869,11 +880,11 @@ end
 
 require 'sinatra'
 
-# by ./public dir
-set :public_folder, File.dirname(__FILE__) + '/static' 
+# by default ./public dir
+<b>set :public_folder, File.dirname(__FILE__) + '/static' </b>
 
 get '/' do
-  File.read('static/index.html')
+  "... some html here .."
 end
 </pre>
 </section>
@@ -888,6 +899,70 @@ http://example.com/css/style.css
 </section>
 
 </div>
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * TOPIC 2: Let's up pur site
+ *
+-->
+<div class="slide transparent image" data-backgroundid="bg_homer">
+  <div data-build>
+    <section class="bottomWide dark" data-auto>
+      <h1>Let's up pur site</h1>
+    </section>
+  </div>
+</div>
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Up real site
+ *
+-->
+<div class="slide centercontents"  data-backgroundid="bg_ruby_what_is_2">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Up real site</header>
+
+<section>
+<pre style="font-size:28px">
+Put your HTML, CSS, JS files in public folder
+</pre>
+</section>
+
+<section data-build>
+<pre style="font-size:28px">
+# init.rb
+
+require 'sinatra'
+
+get '/' do
+  File.read('static/index.html')
+end
+</pre>
+</section>
+
+<section data-build>
+<pre style="font-size:28px">
+$ ruby init.rb
+</pre>
+</section>  
+</div>
+
+
+
+
 
 
 
@@ -980,6 +1055,58 @@ http://example.com/css/style.css
 
 
 
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * add HAML SASS
+ *
+-->
+<div class="slide centercontents"  data-backgroundid="bg_ruby_what_is_2">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>HAML and SASS</header>
+
+<section>
+<pre style="font-size:26px">
+$ gem install haml
+</pre>
+</section>
+
+<section data-build>
+<pre style="font-size:26px">
+$ html2haml index.html > index.haml
+</pre>
+</section>
+
+<section data-build>
+<pre style="font-size:26px">
+# init.rb
+
+require 'sinatra'
+require 'haml'
+
+get '/style.css' do
+  sass :style
+end
+
+get '/' do
+  haml :index
+end
+
+</pre>
+</section>  
+</div>
+
+
+
+
+
+
 <!--------------------------------------- Slide -------------------------------------------------------
  *
  * Views / Layouts
@@ -1002,14 +1129,12 @@ http://example.com/css/style.css
 
 
 
-
-
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Filters
+ * add layout
  *
 -->
-<div class="slide centercontents">
+<div class="slide centercontents"  data-backgroundid="bg_ruby_what_is_2">
   <!-- notes -->
   <aside class="note white_text">
     <section>
@@ -1017,34 +1142,39 @@ http://example.com/css/style.css
     </section>
   </aside>
   <!-- notes -->
-  <header>Filters</header>
-  <section>
-    text goes here...
-  </section>
+  <header>Add layout</header>
 
+<section>
+<pre style="font-size:26px">
+layout goes here..
+</pre>
+</section>
+
+<section data-build>
+<pre style="font-size:26px">
+index does here..
+</pre>
+</section>
+
+<section data-build>
+<pre style="font-size:26px">
+# init.rb
+
+require 'sinatra'
+require 'haml'
+
+get '/style.css' do
+  sass :style
+end
+
+get '/' do
+  haml :index
+end
+
+</pre>
+</section>  
 </div>
 
-
-
-<!--------------------------------------- Slide -------------------------------------------------------
- *
- * Helpers
- *
--->
-<div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
-  <header>Helpers</header>
-  <section>
-    text goes here...
-  </section>
-
-</div>
 
 
 
@@ -1070,12 +1200,12 @@ http://example.com/css/style.css
 </div>
 
 
-<!--------------------------------------- Slide -------------------------------------------------------
+<!--------------------------------------- Slide  -------------------------------------------------------
  *
- * Error Handling
+ * You can use
  *
 -->
-<div class="slide centercontents">
+<div class="slide transparent centercontents" data-backgroundid="bg_ruby_what_is_2">
   <!-- notes -->
   <aside class="note white_text">
     <section>
@@ -1083,14 +1213,37 @@ http://example.com/css/style.css
     </section>
   </aside>
   <!-- notes -->
-  <header>Error Handling</header>
-  <section>
-    text goes here...
+    <section>
+    <div style="font-size:110%; color:#fff">
+      <h1>Sinatra provide you</h1>
+      <h1><span class="mark_green">Filters</span>, <span class="mark_yellow">Helpers</span>, </h1>
+      <h1><span class="mark_red">Error Handling</span>, <span class="mark_blue">Testing</span>,</h1>
+      <h1><span class="mark_yellow">Sessions</span>...</h1>
+    </div>
   </section>
 
 </div>
 
 
+
+
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * TOPIC 3: Deploy your project in a min
+ *
+-->
+<div class="slide transparent image" data-backgroundid="bg_linen">
+  <div data-build>
+    <section class="bottomWide dark" data-auto>
+      <h1>Deploy your project in a min</h1>
+    </section>
+  </div>
+</div>
 
 
 <!--------------------------------------- Slide -------------------------------------------------------
@@ -1114,43 +1267,6 @@ http://example.com/css/style.css
 </div>
 
 
-<!--------------------------------------- Slide -------------------------------------------------------
- *
- * Testing
- *
--->
-<div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
-  <header>Testing</header>
-  <section>
-    text goes here...
-  </section>
-
-</div>
-
-
-
-
-
-
-<!--------------------------------------- Slide  -------------------------------------------------------
- *
- * TOPIC 2: Deploy your project in a min
- *
--->
-<div class="slide transparent image" data-backgroundid="bg_linen">
-  <div data-build>
-    <section class="bottomWide dark" data-auto>
-      <h1>Deploy your project in a min</h1>
-    </section>
-  </div>
-</div>
 
 <!--------------------------------------- Slide  -------------------------------------------------------
  *
@@ -1170,12 +1286,166 @@ http://example.com/css/style.css
       <h1>Heroku is a <span class="mark_yellow">Ruby</span> <span class="mark_red">hosting</span>,</h1>
       <h1> with <span class="mark_red">free</span> plan, fully<span class="mark_purple">automated</span> </h1>
       <h1><span class="mark_green">deploy</span> in a min. Add custom <span class="mark_yellow">domain</span></h1>
-      <!-- <h1>(and slightly <span class="mark_blue">functional</span>) </h1>
-      <h1><span class="mark_yellow">open-source</span>   programming language</h1>
-      <h1>with <span class="mark_red">elegant</span>, <span class="mark_green">flexible syntax.</span></h1> -->
+      <h1><a href="http://heroku.com" target="_blank">http://heroku.com</a></h1>
     </div>
   </section>
 </div>
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Prapare deploy
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Prepare app to deploy</header>
+<section>
+<pre style="font-size:28px">
+# config.ru
+
+require './ditty'
+run Sinatra::Application
+
+</pre>
+</section>
+
+<section data-build>
+<pre style="font-size:28px">
+# .gems
+
+sinatra
+
+</pre>
+</section>
+
+</div>
+
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Deploy to heroku
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Deploy to Heroku</header>
+
+<section>
+<pre style="font-size:28px">
+$ git init
+$ git commit -am "initial commit"
+</pre>
+</section>
+
+<section data-build>
+<pre style="font-size:28px">
+$ gem install heroku
+</pre>
+</section>
+
+<section data-build>
+<pre style="font-size:28px">
+$ heroku create ditty
+</pre>
+</section>
+</section>
+
+<section data-build>
+<pre style="font-size:28px">
+$ git push heroku master
+</pre>
+</section>
+
+</div>
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * WAT
+ *
+-->
+<div class="slide transparent centercontents" data-backgroundid="bg_ruby_what_is_2">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <section >
+    <div style="font-size:210%; color:#fff">
+      <h1><span class="mark_red">W A T</span> <span class="mark_blue">?</span><span class="mark_blue">?</span><span class="mark_purple">!</span></h1>
+    </div>
+  </section>
+</div>
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * REST
+ *
+-->
+<div class="slide transparent centercontents" data-backgroundid="bg_ruby_what_is_2">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <section >
+    <div style="font-size:100%; color:#fff">
+      <span style="margin-left:60px">
+        <img src="images/sinatra_metal.png" style="width:700px;margin-top:-80px">
+      </span>
+      <h1>Yep, we just now <span class="mark_red">Deployed</span> our <span class="mark_green">web app</span> o_O</h1>
+    </div>
+  </section>
+</div>
+
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Go to Browser
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      Oh, you don't belive me!
+      Just open a browser..
+      TODO: add screenshot
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Go to browser</header>
+  <section>
+    screen shot goes here...
+  </section>
+</div>
+
+
 
 
 
@@ -1212,7 +1482,225 @@ http://example.com/css/style.css
 
 
 
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * TOPIC 5: Advanced
+ *
+-->
+<div class="slide transparent image" data-backgroundid="bg_linen">
+  <div data-build>
+    <section class="bottomWide dark" data-auto>
+      <h1>Advanced</h1>
+    </section>
+  </div>
+</div>
 
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Authentification
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Authentification</header>
+
+  <section>
+    Rack::Warden <br>
+    text goes here..
+  </section>
+
+</div>
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Rack Modules
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Rack Modules</header>
+
+  <section>
+    Some useful Rack Modules <br>
+    text goes here..
+  </section>
+
+</div>
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Mail
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Mail</header>
+
+  <section>
+    How to send an e-mail <br>
+    text goes here..
+  </section>
+
+</div>
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Files Upload/Download
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Files Upload/Download</header>
+
+  <section>
+    upload/download files <br>
+    text goes here..
+  </section>
+
+</div>
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Images
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Images</header>
+
+  <section>
+    Work with images <br>
+    text goes here..
+  </section>
+
+</div>
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * API
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Sotial networks</header>
+
+  <section>
+    Facebook, Twitter, VK - no propbem! <br>
+    some useful gems..  <br>
+    text goes here..
+  </section>
+
+</div>
+
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * API
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>API example</header>
+
+  <section>
+    Some API example <br>
+    JSON - it's easy, just call .to_json method<br>
+    text goes here..
+  </section>
+
+</div>
+
+
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * Links
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Links</header>
+
+  <section>
+    <ul>
+      <li><a href="http://sinatrarb.com">http://sinatrarb.com</a></li>
+      <li><a href="http://heroku.com">http://heroku.com</a></li>
+      <li><a href="http://haml-lang.com/">http://haml-lang.com/</a></li>
+      <li><a href="https://github.com/hassox/warden">https://github.com/hassox/warden</a></li>
+      <li><a href="http://rubyinstaller.org/">http://rubyinstaller.org/</a></li>
+      <li><a href="https://..">..</a></li>
+    </ul>
+  </section>
+
+</div>
 
 
 
