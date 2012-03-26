@@ -1,10 +1,90 @@
-h1. Presentation = { :noobie => 'Ruby' }
+h1. Sinatra: Sing with me this ditty
 
+h3. Agenda
 
-
-Not a boooring Presentation about Ruby and Ruby on Rails
-
-
-
-
-Comming soon ...
+1. Sinatra: about
+	1.1. What is Sinatra?
+		- I know, about what you are thinking!
+		- MVC
+		- WAT?
+		- RESTful HTTP Actions !
+	1.2. For whom?
+		- For YOU !!
+	1.3. For What?
+		- hosting statis files
+		- any dynamic
+		- tons of modules, gems
+		- API
+		- Satistic apps
+		- R + M + V + C + ..
+	1.3. Why?
+		- Because: Lightweight, Easy, Really fast development
+		- code: create one file, install gem, run
+		- WAT?
+		- Yep, it's Whole WEB Application o_O
+		- screen-shot: Go to browser
+	1.4. About Sinatra
+		- Single file web app, speed, minimalism, Rack, Templates, JS, ORB, fast
+		- Oh man, I know, about what you are thinking!
+		- Why I have to install Ruby ?
+		- Just come down. It's NOT a problem! Really. MacOS has Ruby. Ubuntu has Ruby. Windows..
+		- WAT? Windows. Are You Serious ??
+		- Yep, you can use Ruby on your lovely Windows http://rubyinstaller.org
+		- Let's talk about Sinatra
+	1.5. Shortly about Ruby
+		- some docs
+		- what is gem?
+		- ...
+2. Site: up and running
+	2.1. Routes
+	2.2. Custom Routes
+	2.3. Static files
+	2.4. Let's up our site
+		- code: Up real site. Put your HTML, CSS, JS files in public folder. run.
+	2.5. Views / Templates
+		- Available Template Languages
+		- Let's talk about HAML
+		- HAML intro
+		- code: Use HAML and SASS in Sinatra (CoffeeScript?)
+	2.6. Views / Layouts
+		- code: Add layout to our site
+	2.7. Configuration
+	2.8. Sinatra provide you
+		- Filters, Helpers, Error Handling, Testing, Sessions...
+3. Deploy: in a minutes
+	3.1. Rack Middleware
+	3.2. Heroku: what is it?
+	3.3. code: Prepare app to deploy
+	3.4. code: Deploy to Heroku
+		- WAT?
+		- Yep, we just now Deployed our web app o_O
+		- screen-shot: Go to browser
+4. DB: just use it
+	4.1. ORM: It's easy
+		- How to incude some ORM (DataMapper or Active Record)
+		- ..
+		- ...
+		- ....
+	4.2. NoSQL - no problems
+		- How to incude some NoSQL gem (for Mongo or Redis)
+		- ..
+		- ...
+		- ....
+5. Sinatra: more
+	5.1. Authentification
+		- Rack::Warden (?)
+	5.2. Rack Modules
+		- Some useful Rack Modules (?)
+		- ..
+	5.3. Images
+		- Work with images (??)
+	5.4. Files Upload/Download
+		- How to upload/download files (?)
+	5.5. Sotial networks
+		- OAuth (?)
+		- Twitter Facebook (?) 
+		- some useful gems.. (?)
+	5.6. API example
+		- Some API example (?)
+		- JSON - it's easy, just call .to_json method 
+	5.7. Links
