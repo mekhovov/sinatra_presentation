@@ -3,7 +3,7 @@
 /* SPAN elements with the classes below are added by prettyprint. */
 .str { color: #080; }
 .kwd { color: #008; }
-.com { color: #800; }
+.com { color: #666; }
 .typ { color: #606; }
 .lit { color: #066; }
 .pun, .opn, .clo { color: #660; }
@@ -17,7 +17,7 @@
 @media print {
   .str { color: #060; }
   .kwd { color: #006; font-weight: bold; }
-  .com { color: #600; font-style: italic; }
+  .com { color: #666; font-style: italic; }
   .typ { color: #404; font-weight: bold; }
   .lit { color: #044; }
   .pun, .opn, .clo { color: #440; }
