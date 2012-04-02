@@ -1,4 +1,4 @@
-sli<!DOCTYPE html>
+<!DOCTYPE html>
 <!--
 Copyright 2011 Google Inc.
 
@@ -59,7 +59,6 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
       <div id="bg-degree" class="background"></div>
 
       <div id="bg_sinatra_01" class="background"></div>
-      <div id="bg_homer" class="background"></div>
       <div id="bg_linen" class="background"></div>
       <div id="bg_01" class="background"></div>
       <div id="bg_striped_blue" class="background"></div>
@@ -144,7 +143,7 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
  *
 -->
 <div class="slide transparent centercontents" id="slide-preflight"  data-backgroundid="bg_01">
-  <section class="white_text">
+  <section class="white_text_small">
     <h2>Preflight</h2>
     <div id="browser-webkit" class="hidden good feature">
       <div><img src='images/icons/ok.png'/> Webkit</div>
@@ -177,10 +176,6 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
       <div><img src='images/icons/ok.png'/> WebGL: available</div>
     </div>
     <div id="feature-no-webgl" class="hidden bad feature">
-      <div><img src='images/icons/error.png'/> WebGL: not supported</div>
-      <div class="explanation">
-        You will not be able to see the WebGL demos later in this slide deck.
-      </div>
     </div>
     <div id="feature-notification" class="hidden">
       <div id="notification-on" class='hidden warning feature'>
@@ -243,38 +238,19 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
       </div>
     </div>
   </section>
-  <section class="white_text">
-      If things look good, press <span class="key">→</span> to move on.
-  </section>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br>
-</div>
-
-
-<!--------------------------------------- Slide  -------------------------------------------------------
- *
- * Controls
- *
--->
-<div class="slide transparent segue centercontents" data-backgroundid="bg_01">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      Welcome! (This field is for presenter notes and commentary.)
-    </section>
-  </aside>
-  <!-- notes -->
-  <section class="white_text">
+  <section class="white_text_large">
     <h2>Controls</h2>
     <ul>
       <li>Space or <span class="key">&larr;</span> / <span class='key'>&rarr;</span> to move around</li>
       <li><span class="key">Ctrl/Command</span> / <span class='key'>–</span> or <span class='key'>+</span> to zoom in and out if slides don’t fit</li>
-      <li><span class="key">N</span> to show/hide speaker notes</li>
-      <li><span class="key">H</span> to highlight important elements in code snippets</li>
+      <li><span class="key">N</span> to show/hide notes <span class="key">H</span> to highlight elements</li>
     </ul>
+    <hr>
+      If things look good, press <span class="key">→</span> to move on.
   </section>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  
+  <br><br><br><br><br><br><br><br><br><br>
 </div>
-
 
 
 <!--------------------------------------- Slide  -------------------------------------------------------
@@ -373,7 +349,7 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
       <h1>for <span class="mark_yellow">quickly</span> creating </h1>
       <h1><span class="mark_blue">web</span> applications</h1>
       <h1> with minimal effort</h1>
-      <h1><a href='http://sinartarb.com' style="color:#112">http://sinartarb.com</a></h1>
+      <h1><span class="mark_white"><a href='http://sinatrarb.com' style="color:#112" target="_blank">http://sinatrarb.com</a></span></h1>
     </div>
   </section>
 </div>
@@ -403,7 +379,7 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
 -->
 <div class="slide transparent centercontents" data-backgroundid="bg-05">
   <section >
-    <div style="font-size:280%; color:#fff; position:relative; left:-390px; top: -270">
+    <div style="font-size:280%; color:#fff; position:relative; left:-400px; top: -270px">
       <h1><span class="mark_red">M</span> <span class="mark_yellow">V</span> <span class="mark_blue">C</span></h1>
     </div>
   </section>
@@ -540,7 +516,7 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
  *
 -->
 <div class="slide transparent centercontents" data-backgroundid="bg-17">
-  <section style="position:relative; top: -280px; ">
+  <section style="position:relative; top: -300px; ">
     <div style="font-size:210%; color:#fff">
       <h1> <span class="mark_red">&nbsp;W h y ?&nbsp;</span></h1>
     </div>
@@ -724,15 +700,6 @@ $ ruby ditty.rb
  *
 -->
 <div class="slide centercontents" data-backgroundid="bg-01">
-  <!-- notes -->
-  <aside class="">
-    <section>
-      Oh, you don't belive me!
-      Just open a browser..
-      TODO: add screenshot
-    </section>
-  </aside>
-  <!-- notes -->
   <header>Go to browser</header>
   <section>
     screen shot goes here...
@@ -755,7 +722,7 @@ $ ruby ditty.rb
         <h1><span class="mark_white">Runs on</span> <span class="mark_blue">Rack</span></h1>
         <h1><span class="mark_white">Your choice of</span> <span class="mark_green">Template Engine</span></h1>
         <h1><span class="mark_white">Your choice of</span> <span class="mark_yellow">ORM</span></h1>
-        <h1><span class="mark_white">Your choice of</span> <span class="mark_red">2000</span> <span class="mark_white">requests/sec</span></h1>
+        <h1><span class="mark_white">~</span> <span class="mark_red">2000</span> <span class="mark_white">requests/sec</span></h1>
     </div>
   </section>
 </div>
@@ -885,11 +852,11 @@ $ ruby ditty.rb
  *
 -->
 <div class="slide transparent centercontents" data-backgroundid="bg-30">
-    <section style="margin-left: -600px">
+    <section style="margin-left: -580px">
     <div style="font-size:110%; color:#fff">
-      <h1>Yep, you can use <span class="mark_green">Ruby</span></h1>
-      <h1>On your lovely <span class="mark_purple">Windows</span></h1>
-      <h2>http://rubyinstaller.org</h2>
+      <h1><span class="mark_black">Yep, you can use</span> <span class="mark_green">Ruby</span></h1>
+      <h1><span class="mark_black">On your lovely</span> <span class="mark_purple">Windows</span></h1>
+      <h1><span class="mark_white"><a href='http://rubyinstaller.org' style="color:#112" target="_blank">http://rubyinstaller.org</a></span></h2>
     </div>
   </section>
 
@@ -914,9 +881,20 @@ $ ruby ditty.rb
 
 
 
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * 1.6. Shortly about Ruby
+ *
+-->
+<div class="slide centercontents"  data-backgroundid="bg-01">
+  <header>Shortly about Ruby</header>
+  <section>
+    - some docs <br>
+    - what is gem? <br>
+    text goes here...
+  </section>
 
-
-
+</div>
 
 
 
@@ -941,73 +919,6 @@ $ ruby ditty.rb
 
 
 
-<!--------------------------------------- Slide  -------------------------------------------------------
- *
- * TOPIC 3: Deploy: in minutes
- *
--->
-<div class="slide transparent image" data-backgroundid="bg-13">
-  <div data-build>
-    <section class="bottomWide dark" data-auto>
-      <h1><img style="max-width:90px; margin-bottom: -10px;" src="images/topic_3.png" />
-      <span class="bluetheme" style="font-size:65px;font-family:'Bad Script';text-shadow: #111 2px 4px;"><b>Deploy:</b> in minutes</span></h1>
-    </section>
-  </div>
-</div>
-
-
-
-
-<!--------------------------------------- Slide  -------------------------------------------------------
- *
- * TOPIC 4: DB: just use it
- *
--->
-<div class="slide transparent image" data-backgroundid="bg-14">
-  <div data-build>
-    <section class="bottomWide dark" data-auto>
-      <h1><img style="max-width:90px; margin-bottom: -10px;" src="images/topic_4.png" />
-      <span class="bluetheme"style="font-size:65px;font-family:'Bad Script';text-shadow: #111 2px 4px;"> <b>DB:</b> just use it</span></h1>
-    </section>
-  </div>
-</div>
-
-
-
-
-
-
-
-<!--------------------------------------- Slide  -------------------------------------------------------
- *
- * TOPIC 5: Sinatra: more
- *
--->
-<div class="slide transparent image" data-backgroundid="bg-15">
-  <div data-build>
-    <section class="bottomWide dark" data-auto>
-      <h1><img style="max-width:90px; margin-bottom: -10px;" src="images/topic_5.png" />
-      <span class="" style="font-size:65px;font-family:'Bad Script';text-shadow: #111 2px 4px;"><b>Sinatra:</b> more</span></h1>
-    </section>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1017,40 +928,33 @@ $ ruby ditty.rb
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Routes
+ * 2.1. Routes
  *
 -->
-<div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
+<div class="slide centercontents" data-backgroundid="bg-01">
   <header>Routes</header>
   <section>
-<pre style="font-size:22px">
-<b>get</b> '/' do
-  .. show something ..
+<pre style="font-size:26px">
+<b><span class="mark_green">get</span></b> '/' do
+  # .. show something ..
 end
 </pre>
 
 <pre style="font-size:22px">
-<b>post</b> '/' do
-  .. create something ..
+<b><span class="mark_blue">post</span></b> '/' do
+  # .. create something ..
 end
 </pre>
 
 <pre style="font-size:22px">
-<b>put</b> '/' do
-  .. replace something ..
+<b><span class="mark_purple">put</span></b> '/' do
+  # .. replace something ..
 end
 </pre>
 
 <pre style="font-size:22px">
-<b>delete</b> '/' do
-  .. annihilate something ..
+<b><span class="mark_red">delete</span></b> '/' do
+  # .. annihilate something ..
 end
 </pre>
 
@@ -1060,21 +964,14 @@ end
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Custom Routes
+ * 2.2. Custom Routes
  *
 -->
 <div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
   <header>Custom Routes</header>
   <section>
 <pre style="font-size:28px">
-get '/hello/<b>:name</b>' do
+get '/hello/<b><span class="mark_green">:name</span></b>' do
   "Hello #{params[<b>:name</b>]}!"
 end
 
@@ -1085,7 +982,7 @@ end
 
 <section data-build>
 <pre style="font-size:28px">
-get '/say/<b>*</b>/to/<b>*</b>/download/<b>*.*</b>' do
+get '/say/<b><span class="mark_black">*</span></b>/to/<b><span class="mark_black">*</span></b>/download/<b><span class="mark_black">*</span></b>.<b><span class="mark_black">*</span></b>' do
   params[:splat] # => ["<b>hello</b>", "<b>world</b>, <b>path/to/file</b>", "<b>xml</b>"]
 end
 <!-- # matches /say/hello/to/world/download/path/to/file.xml -->
@@ -1094,9 +991,9 @@ end
 
 <section data-build>
 <pre style="font-size:28px">
-get '/posts.?<b>:format?</b>', <b>:provides => ['rss', 'atom', 'xml']</b> do
+get '/posts.?<b><span class="mark_yellow">:format?</span></b>', :provides => ['rss', 'atom', 'xml'] do
+  # matches any extension "GET /posts.<b>json</b>", "GET /posts.<b>xml</b>"..
 end
-  <!-- # matches "GET /posts" and any extension "GET /posts.json", "GET /posts.xml".. -->
 </pre>
 </section>
 
@@ -1108,18 +1005,10 @@ end
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Static files
+ * 2.3. Static files
  *
 -->
 <div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-      http://monkrb.com/structure ??
-    </section>
-  </aside>
-  <!-- notes -->
   <header>Static files</header>
   <section>
 <pre style="font-size:28px">
@@ -1128,7 +1017,7 @@ end
 require 'sinatra'
 
 # by default ./public dir
-<b>set :public_folder, File.dirname(__FILE__) + '/static' </b>
+<b>set :public_folder, File.dirname(__FILE__) + '<span class="mark_black">/static</span>' </b>
 
 get '/' do
   "... some html here .."
@@ -1138,10 +1027,10 @@ end
 
 <section data-build>
 <pre style="font-size:28px">
-http://example.com/css/style.css
+http://example.com/<span class="mark_yellow">css/style.css</span>
 </pre>
 <pre style="font-size:28px">
-./static/css/style.css 
+./static/<span class="mark_yellow">css/style.css</span>
 </pre>
 </section>
 
@@ -1151,40 +1040,21 @@ http://example.com/css/style.css
 
 
 
-<!--------------------------------------- Slide  -------------------------------------------------------
- *
- * TOPIC 2: Let's up pur site
- *
--->
-<div class="slide transparent image" data-backgroundid="bg_homer">
-  <div data-build>
-    <section class="bottomWide dark" data-auto>
-      <h1>Let's up our site</h1>
-    </section>
-  </div>
-</div>
 
 
 
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Up real site
+ *  2.4. Let's up our site
  *
 -->
 <div class="slide centercontents"  data-backgroundid="bg-01">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
-  <header>Up real site</header>
+  <header> Let's up our site</header>
 
 <section>
 <pre style="font-size:28px">
-Put your HTML, CSS, JS files in public folder
+Put your <span class="mark_green">HTML</span>, <span class="mark_blue">CSS</span>, <span class="mark_red">JS</span> files in '<span class="mark_yellow">public</span>' folder
 </pre>
 </section>
 
@@ -1195,7 +1065,7 @@ Put your HTML, CSS, JS files in public folder
 require 'sinatra'
 
 get '/' do
-  File.read('static/index.html')
+  <b>File.read('index.html')</b>
 end
 </pre>
 </section>
@@ -1215,17 +1085,10 @@ $ ruby init.rb
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Views / Templates
+ * 2.5. Views / Templates
  *
 -->
 <div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
   <header>Views / Templates</header>
   <section>
     text goes here...
@@ -1239,18 +1102,11 @@ $ ruby init.rb
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Available Template Languages
+ * - Available Template Languages
  *
 -->
 <div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
-  <header>Available Template Languages</header>
+  <header>You can use</header>
   <section>
     text goes here...
   </section>
@@ -1260,20 +1116,13 @@ $ ruby init.rb
 
 <!--------------------------------------- Slide  -------------------------------------------------------
  *
- * Let's talk about HAML
+ * - Let's talk about HAML
  *
 -->
 <div class="slide transparent centercontents" data-backgroundid="bg-01">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info add HAML logo
-    </section>
-  </aside>
-  <!-- notes -->
     <section>
     <div style="font-size:110%; color:#fff">
-      <h1>Let's talk about <span class="mark_green">HAML</span></h1>
+      <h1><span class="mark_white">Let's talk about</span> <span class="mark_green">HAML</span></h1>
     </div>
   </section>
 
@@ -1282,17 +1131,10 @@ $ ruby init.rb
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * HAML
+ * - HAML intro
  *
 -->
 <div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
   <header>HAML</header>
   <section>
     text goes here...
@@ -1305,17 +1147,10 @@ $ ruby init.rb
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * add HAML SASS
+ * - Use HAML and SASS in Sinatra (CoffeeScript?)
  *
 -->
 <div class="slide centercontents"  data-backgroundid="bg-01">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
   <header>HAML and SASS</header>
 
 <section>
@@ -1356,17 +1191,11 @@ end
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Views / Layouts
+ * 2.6. Views / Layouts
  *
 -->
 <div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
+
   <header>Views / Layouts</header>
   <section>
     text goes here...
@@ -1378,17 +1207,10 @@ end
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * add layout
+ * - Add layout to our site
  *
 -->
-<div class="slide centercontents"  data-backgroundid="bg-01">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
+<div class="slide centercontents" data-backgroundid="bg-01">
   <header>Add layout</header>
 
 <section>
@@ -1428,17 +1250,10 @@ end
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Configuration
+ *  2.7. Configuration
  *
 -->
 <div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
   <header>Configuration</header>
   <section>
     text goes here...
@@ -1449,23 +1264,16 @@ end
 
 <!--------------------------------------- Slide  -------------------------------------------------------
  *
- * You can use
+ * 2.8. Sinatra provide you
  *
 -->
 <div class="slide transparent centercontents" data-backgroundid="bg-01">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
     <section>
     <div style="font-size:110%; color:#fff">
-      <h1>Sinatra provide you</h1>
+      <h1><span class="mark_white">Sinatra provide you</span></h1>
       <h1><span class="mark_green">Filters</span>, <span class="mark_yellow">Helpers</span>, </h1>
       <h1><span class="mark_red">Error Handling</span>, <span class="mark_blue">Testing</span>,</h1>
-      <h1><span class="mark_yellow">Sessions</span>...</h1>
+      <h1><span class="mark_purple">Sessions</span>...</h1>
     </div>
   </section>
 
@@ -1476,36 +1284,32 @@ end
 
 
 
-
-
-
 <!--------------------------------------- Slide  -------------------------------------------------------
  *
- * TOPIC 3: Deploy your project in a min
+ * TOPIC 3: Deploy: in minutes
  *
 -->
-<div class="slide transparent image" data-backgroundid="bg_linen">
+<div class="slide transparent image" data-backgroundid="bg-13">
   <div data-build>
     <section class="bottomWide dark" data-auto>
-      <h1>Deploy your project in a min</h1>
+      <h1><img style="max-width:90px; margin-bottom: -10px;" src="images/topic_3.png" />
+      <span class="bluetheme" style="font-size:65px;font-family:'Bad Script';text-shadow: #111 2px 4px;"><b>Deploy:</b> in minutes</span></h1>
     </section>
   </div>
 </div>
 
 
+
+
+
+
+
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Rack Middleware
+ * 3.1. Rack Middleware
  *
 -->
-<div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
+<div class="slide centercontents" data-backgroundid="bg-01">
   <header>Rack Middleware</header>
   <section>
     text goes here...
@@ -1517,23 +1321,16 @@ end
 
 <!--------------------------------------- Slide  -------------------------------------------------------
  *
- * What Is Heroku
+ * 3.2. Heroku: what is it?
  *
 -->
 <div class="slide transparent centercontents" data-backgroundid="bg-01">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
   <section >
     <div style="font-size:110%; color:#fff">
       <h1>Heroku is a <span class="mark_yellow">Ruby</span> <span class="mark_red">hosting</span>,</h1>
       <h1> with <span class="mark_red">free</span> plan, fully<span class="mark_purple">automated</span> </h1>
-      <h1><span class="mark_green">deploy</span> in a min. Add custom <span class="mark_yellow">domain</span></h1>
-      <h1><a href="http://heroku.com" target="_blank">http://heroku.com</a></h1>
+      <h1><span class="mark_green">deploy</span> in a min. Add custom <span class="mark_blue">domain</span></h1>
+      <h1><span class="mark_white"><a href="http://heroku.com"  style="color:#112" target="_blank">http://heroku.com</a></span></h1>
     </div>
   </section>
 </div>
@@ -1541,17 +1338,10 @@ end
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Prapare deploy
+ * - Prepare app to deploy
  *
 -->
 <div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
   <header>Prepare app to deploy</header>
 <section>
 <pre style="font-size:28px">
@@ -1580,17 +1370,10 @@ sinatra
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Deploy to heroku
+ * - Deploy to heroku
  *
 -->
 <div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
   <header>Deploy to Heroku</header>
 
 <section>
@@ -1625,17 +1408,10 @@ $ git push heroku master
 
 <!--------------------------------------- Slide  -------------------------------------------------------
  *
- * WAT
+ * - WAT
  *
 -->
 <div class="slide transparent centercontents" data-backgroundid="bg-01">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
   <section >
     <div style="font-size:210%; color:#fff">
       <h1><span class="mark_red">W A T</span> <span class="mark_blue">?</span><span class="mark_blue">?</span><span class="mark_purple">!</span></h1>
@@ -1646,17 +1422,10 @@ $ git push heroku master
 
 <!--------------------------------------- Slide  -------------------------------------------------------
  *
- * REST
+ * - Yep, we just now Deployed our web app o_O
  *
 -->
 <div class="slide transparent centercontents" data-backgroundid="bg-01">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
   <section >
     <div style="font-size:100%; color:#fff">
       <span style="margin-left:60px">
@@ -1673,19 +1442,10 @@ $ git push heroku master
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Go to Browser
+ * - screen-shot: Go to browser
  *
 -->
 <div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      Oh, you don't belive me!
-      Just open a browser..
-      TODO: add screenshot
-    </section>
-  </aside>
-  <!-- notes -->
   <header>Go to browser</header>
   <section>
     screen shot goes here...
@@ -1699,7 +1459,29 @@ $ git push heroku master
 
 <!--------------------------------------- Slide  -------------------------------------------------------
  *
- * TOPIC 3: ORM?! It's easy
+ * TOPIC 4: DB: just use it
+ *
+-->
+<div class="slide transparent image" data-backgroundid="bg-14">
+  <div data-build>
+    <section class="bottomWide dark" data-auto>
+      <h1><img style="max-width:90px; margin-bottom: -10px;" src="images/topic_4.png" />
+      <span class="bluetheme"style="font-size:65px;font-family:'Bad Script';text-shadow: #111 2px 4px;"> <b>DB:</b> just use it</span></h1>
+    </section>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 4.1. ORM: It's easy
  *
 -->
 <div class="slide transparent image" data-backgroundid="bg_linen">
@@ -1713,9 +1495,53 @@ $ git push heroku master
 
 
 
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * - How to include some ORM (DataMapper or Active Record)
+ *
+-->
+<div class="slide centercontents">
+  <header>How to include ORM</header>
+  <section>
+    - DataMapper or Active Record <br>
+    text goes here...
+  </section>
+
+</div>
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * - ORM
+ *
+-->
+<div class="slide centercontents">
+  <header>ORM</header>
+  <section>
+    text goes here...
+  </section>
+
+</div>
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * - ORM
+ *
+-->
+<div class="slide centercontents">
+  <header>ORM</header>
+  <section>
+    text goes here...
+  </section>
+
+</div>
+
+
 <!--------------------------------------- Slide  -------------------------------------------------------
  *
- * TOPIC 3: NoSQL - No Problems
+ * 4.2. NoSQL - no problems
  *
 -->
 <div class="slide transparent image" data-backgroundid="bg_linen">
@@ -1728,16 +1554,65 @@ $ git push heroku master
 
 
 
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * - How to include some NoSQL gem (for Mongo or Redis)
+ *
+-->
+<div class="slide centercontents">
+  <header>How to include some NoSQL gem</header>
+  <section>
+    - for Mongo or Redis <br>
+    text goes here...
+  </section>
+
+</div>
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * - NoSQL
+ *
+-->
+<div class="slide centercontents">
+  <header>NoSQL</header>
+  <section>
+    text goes here...
+  </section>
+
+</div>
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * - NoSQL
+ *
+-->
+<div class="slide centercontents">
+  <header>NoSQL</header>
+  <section>
+    text goes here...
+  </section>
+
+</div>
+
+
+
+
+
+
 
 <!--------------------------------------- Slide  -------------------------------------------------------
  *
- * TOPIC 5: Advanced
+ * TOPIC 5: Sinatra: more
  *
 -->
-<div class="slide transparent image" data-backgroundid="bg_linen">
+<div class="slide transparent image" data-backgroundid="bg-15">
   <div data-build>
     <section class="bottomWide dark" data-auto>
-      <h1>Advanced</h1>
+      <h1><img style="max-width:90px; margin-bottom: -10px;" src="images/topic_5.png" />
+      <span class="" style="font-size:65px;font-family:'Bad Script';text-shadow: #111 2px 4px;"><b>Sinatra:</b> more</span></h1>
     </section>
   </div>
 </div>
@@ -1748,17 +1623,10 @@ $ git push heroku master
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Authentification
+ * 5.1. Authentication
  *
 -->
-<div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
+<div class="slide centercontents" data-backgroundid="bg-01">
   <header>Authentification</header>
 
   <section>
@@ -1773,17 +1641,10 @@ $ git push heroku master
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Rack Modules
+ * 5.2. Rack Modules
  *
 -->
 <div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
   <header>Rack Modules</header>
 
   <section>
@@ -1795,56 +1656,9 @@ $ git push heroku master
 
 
 
-
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Mail
- *
--->
-<div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
-  <header>Mail</header>
-
-  <section>
-    How to send an e-mail <br>
-    text goes here..
-  </section>
-
-</div>
-
-
-
-<!--------------------------------------- Slide -------------------------------------------------------
- *
- * Files Upload/Download
- *
--->
-<div class="slide centercontents">
-  <!-- notes -->
-  <aside class="note white_text">
-    <section>
-      TODO: add info
-    </section>
-  </aside>
-  <!-- notes -->
-  <header>Files Upload/Download</header>
-
-  <section>
-    upload/download files <br>
-    text goes here..
-  </section>
-
-</div>
-
-<!--------------------------------------- Slide -------------------------------------------------------
- *
- * Images
+ * 5.4. Images
  *
 -->
 <div class="slide centercontents">
@@ -1868,7 +1682,7 @@ $ git push heroku master
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * API
+ * 5.5. Files Upload/Download
  *
 -->
 <div class="slide centercontents">
@@ -1879,11 +1693,37 @@ $ git push heroku master
     </section>
   </aside>
   <!-- notes -->
-  <header>Sotial networks</header>
+  <header>Files Upload/Download</header>
 
   <section>
-    Facebook, Twitter, VK - no propbem! <br>
-    some useful gems..  <br>
+    upload/download files <br>
+    text goes here..
+  </section>
+
+</div>
+
+
+
+
+<!--------------------------------------- Slide -------------------------------------------------------
+ *
+ * 5.6. Social networks
+ *
+-->
+<div class="slide centercontents">
+  <!-- notes -->
+  <aside class="note white_text">
+    <section>
+      TODO: add info
+    </section>
+  </aside>
+  <!-- notes -->
+  <header>Social networks</header>
+
+  <section>
+    - OAuth (?) <br>
+    - Twitter Facebook (?)  <br>
+    - some useful gems.. (?) <br>
     text goes here..
   </section>
 
@@ -1895,7 +1735,7 @@ $ git push heroku master
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * API
+ * 5.7. API example
  *
 -->
 <div class="slide centercontents">
@@ -1923,7 +1763,7 @@ $ git push heroku master
 
 <!--------------------------------------- Slide -------------------------------------------------------
  *
- * Links
+ * 5.8. Links
  *
 -->
 <div class="slide centercontents">
@@ -1951,6 +1791,37 @@ $ git push heroku master
 
 
 
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * QUESTIONS
+ *
+-->
+
+<div class="slide transparent image" data-backgroundid="bg_metal">
+  <div data-build>
+    <section data-auto style="background:none">
+    <span style="margin-left:130px">
+      <img src="images/sinatra_metal.png" style="height:500px;margin-top:150px">
+      <div class="topmic">
+        <h1 style="margin-left:330px;margin-top:-200px;font-size:55px;font-family:'Bad Script';text-shadow: #111 2px 4px; color:orange">QUESTIONS ?</h1>
+      </div>
+    </span>
+    </section>
+  </div>
+</div>
+
+
+
+
+
+
+
+
 <!=========================================== The End ===================================================
  *
  * No more Slides
@@ -1969,17 +1840,6 @@ $ git push heroku master
     <script src="js/slide-presentation.js" defer></script>
     <script src="js/slide-content.js" defer></script>
 
-    <script>
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-23384572-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
 
     <!--[if IE]>
     <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>

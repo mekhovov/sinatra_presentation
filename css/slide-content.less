@@ -251,10 +251,6 @@
   .background-size(stretch);
   background: url('/images/bg_sinatra_01.jpg') no-repeat bottom;
 }
-#bg_homer {
-  .background-size(stretch);
-  background: url('/images/bg_homer.jpg') no-repeat, url('/images/20p-black.png') repeat;
-}
 #bg-ror {
   .background-size(inherit);
   background: url('/images/bg-ror.jpg');
@@ -611,6 +607,19 @@ section {
   text-shadow: white 0px 1px 0px, rgba(0, 0, 0, 0.2) 0 2px 5px;
 }
 
+.white_text_small {
+  font: 18px 'Lato', 'Ubuntu', Arial;
+  font-weight: normal;
+  color: #cfcfcf;
+  text-shadow: white 0px 1px 0px, rgba(0, 0, 0, 0.2) 0 2px 5px;
+}
+.white_text_large {
+  font: 26px 'Lato', 'Ubuntu', Arial;
+  font-weight: normal;
+  color: #cfcfcf;
+  text-shadow: white 0px 1px 0px, rgba(0, 0, 0, 0.2) 0 2px 5px;
+}
+
 [data-build] {
   > * {
     -webkit-transition: opacity 0.5s ease-in-out 0.2s;
@@ -941,7 +950,7 @@ pre {
   bottom: 10px;
   position: relative;
   .border-radius(10px);
-  background: #fff;
+  background: rgba(230, 230, 230, 0.6);
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
   vertical-align: sub;
 }
@@ -1042,11 +1051,21 @@ img.cutout {
   color: #fff;
   .text-shadow(0 1px 4px #000);
 }
+pre .mark_blue, pre .mark_red, pre .mark_yellow, pre .mark_green, pre .mark_purple, pre .mark_white, pre .mark_black {
+  .text-shadow(0 0 0 #000);
+}
+
 .mark_white {
   display: inline-block;
   padding: 3px 5px;
   border-radius: 5px;
   color: #fff;
+}
+.mark_black {
+  display: inline-block;
+  padding: 3px 5px;
+  border-radius: 5px;
+  color: #111;
 }
 header {
   vertical-align: top;
@@ -1059,7 +1078,7 @@ header {
     font-size: 60%;
   }
 
-  .mark_blue, .mark_red, .mark_yellow, .mark_green, .mark_purple, .mark_white {
+  .mark_blue, .mark_red, .mark_yellow, .mark_green, .mark_purple, .mark_white, .mark_black {
     display: block;
     margin-right: 10px;
     font-size: 60%;
@@ -1094,7 +1113,10 @@ header {
 .mark_white {
   background-color: rgba(247, 244, 234, 0.7);
   color: #111;
-
+}
+.mark_black {
+  background-color: rgba(47, 44, 34, 0.3);
+  color: white;
 }
 .mark_green {
   background-color: rgba(65, 154, 12, 0.6);
