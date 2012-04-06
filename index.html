@@ -238,6 +238,7 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
       </div>
     </div>
   </section>
+  
   <section class="white_text_large">
     <h2>Controls</h2>
     <ul>
@@ -1286,14 +1287,14 @@ $ html2haml index.html > index.haml
 # init.rb
 
 require 'sinatra'
-require 'haml'
+<b>require 'haml'</b>
 
-get '/style.css' do
-  sass :style
+<b>get '/style.css' do</b>
+  <b>sass :style</b>
 end
 
 get '/' do
-  haml :index
+  <b>haml :index</b>
 end
 
 </pre>
@@ -1310,56 +1311,43 @@ end
  * 2.6. Views / Layouts
  * TODO: add text
 -->
-<div class="slide centercontents">
-
+<div class="slide centercontents"  data-backgroundid="bg-01">
   <header>Views / Layouts</header>
-  <section>
-    text goes here...
-  </section>
-
-</div>
-
-
-
-<!--------------------------------------- Slide -------------------------------------------------------
- *
- * - Add layout to our site
- * TODO: add text
--->
-<div class="slide centercontents" data-backgroundid="bg-01">
-  <header>Add layout</header>
 
 <section>
-<pre style="font-size:26px">
-layout goes here..
+<pre style="font-size:22px">
+!!!
+%html
+  %head
+    %title Todo
+    %link{:rel=>'stylesheet', :href=>'/css/style.css'}
+  %body
+    #banner My To Do List
+    <b>#new-todo
+      %form{:method => "post"} ...
+    #content
+      %table
+      - @todos.each do |todo|
+        ...</b>
 </pre>
 </section>
 
+
+
 <section data-build>
-<pre style="font-size:26px">
-index does here..
+<pre style="font-size:22px">
+!!!
+%html
+  %head
+    %title Todo
+    %link{:rel=>'stylesheet', :href=>'/css/style.css', :type => "text/css"}       
+  %body
+    #banner My To Do List
+    <b>= yield</b>
 </pre>
 </section>
 
-<section data-build>
-<pre style="font-size:26px">
-# init.rb
-
-require 'sinatra'
-require 'haml'
-
-get '/style.css' do
-  sass :style
-end
-
-get '/' do
-  haml :index
-end
-
-</pre>
-</section>  
 </div>
-
 
 
 
@@ -1493,10 +1481,12 @@ end
 <div class="slide transparent centercontents" data-backgroundid="bg-01">
   <section >
     <div style="font-size:110%; color:#fff">
-      <h1><span class="mark_white">Heroku</span> is a <span class="mark_yellow">Ruby</span> <span class="mark_red">hosting</span>,</h1>
-      <h1>with <span class="mark_green">free</span> plan</h1>
-      <h1>fully <span class="mark_purple">automated</span> <span class="mark_purple">deploy</span> in a min </h1>
-      <h1>custom <span class="mark_blue">domain</span></h1>
+      <h1><span class="mark_yellow">Heroku</span>: Agile deployment for </h1>
+      <h1><span class="mark_red">Ruby</span>, <span class="mark_white">Node.js</span>, <span class="mark_black">Clojure</span></h1>
+      <h1><span class="mark_white">Java</span>, <span class="mark_black">Python</span>, <span class="mark_white">Scala</span>.
+      <h1>- with <span class="mark_green">free</span> plan,</h1>
+      <h1>- fully <span class="mark_purple">automated</span> <span class="mark_purple">deploy</span> in a min </h1>
+      <h1>- custom <span class="mark_blue">domain</span></h1>
       <h1><span class="mark_black"><a href="http://heroku.com"  style="color:#ccc" target="_blank">http://heroku.com</a></span></h1>
     </div>
   </section>
@@ -1857,7 +1847,7 @@ end
 
 class Image
   <b>include Mongoid::Document</b>
-  field :title, type: String
+  <b>field :title, type: String</b>
 end
 
 </pre>
@@ -2005,14 +1995,35 @@ $ shotgun -p 4567 ditty.rb
  * 5.1. Authentication
  * TODO: add
 -->
-<div class="slide centercontents" data-backgroundid="bg-01">
-  <header>Authentification</header>
-
+<div class="slide centercontents">
+  <header>Authentication</header>
   <section>
-    Rack::Warden <br>
-    text goes here..
-  </section>
+<pre style="font-size:26px">
+helpers do
+  def protected!
+    throw(:halt, [401, "Not authorized\n"])  unless authorized?
+  end
+  def authorized?
+    @auth ||=  Rack::Auth::Basic::Request.new(request.env)
+    @auth.provided? && @auth.basic? && @auth.credentials 
+                    && @auth.credentials == ['admin', 'admin']
+  end
+end
 
+get '/' do "Everybody can see this page" end
+
+get '/protected' do
+  protected!
+  "Welcome, authenticated client"
+end
+</pre>
+
+  </section>
+<section data-build>
+<pre style="font-size:26px">
+<a href="https://github.com/jsmestad/sinatra_warden" target="_blank">https://github.com/jsmestad/sinatra_warden</a>
+</pre>
+</section>
 </div>
 
 
@@ -2026,29 +2037,25 @@ $ shotgun -p 4567 ditty.rb
 <div class="slide centercontents">
   <header>Rack Modules</header>
 
-  <section>
-    Some useful Rack Modules <br>
-    text goes here..
+  <section style="font-size: 26px;">
+    <ul>
+      <li><b>JSON-P</b> - Adds JSON-P support</li>
+      <li><b>Cache</b> - is suitable as a quick drop-in component to enable HTTP cachin</li>
+      <li><b>Warden</b> - General Rack Authentication Framework</li>
+      <li><b>MailExceptions</b> - Rescues exceptions raised from the app and sends a useful email with the exception, stacktrace, and contents of the environment.</li>
+      <li><b>TimeZone</b> - Detects the client’s timezone using JavaScript and sets a variable in Rack’s environment with the offset from UTC.</li>
+      <li><b>Access</b> - Limits access based on IP address</li>
+      <li><b>Deflect</b> - Helps protect against DoS attacks</li>
+      <li>...</li>
+    </ul>
+    <a href="https://github.com/rack/rack-contrib" target="_blank">https://github.com/rack/rack-contrib</a><br>
+    <a href="http://coderack.org/middlewares" target="_blank">http://coderack.org/middlewares</a>
   </section>
 
 </div>
 
 
 
-<!--------------------------------------- Slide -------------------------------------------------------
- *
- * 5.4. Images
- * TODO: add
--->
-<div class="slide centercontents">
-  <header>Images</header>
-
-  <section>
-    Work with images <br>
-    text goes here..
-  </section>
-
-</div>
 
 
 
@@ -2058,7 +2065,7 @@ $ shotgun -p 4567 ditty.rb
  * TODO: add
 -->
 <div class="slide centercontents">
-  <header>Files Upload/Download</header>
+  <header>Send Files</header>
 
 <section>
 <pre style="font-size:26px">
@@ -2067,15 +2074,6 @@ get '/' do
 end
 </pre>
 </section>
-
-
-<section>
-<pre style="font-size:26px">
-text goes here..
-</pre>
-</section>
-
-
 
 </div>
 
@@ -2235,21 +2233,21 @@ end
 <div class="slide centercontents">
   <header>Links</header>
 
-  <section>
+  <section style="font-size: 28px">
     <ul>
       <li><a href="http://sinatrarb.com" target="_blank">http://sinatrarb.com</a></li>
       <li><a href="http://heroku.com" target="_blank">http://heroku.com</a></li>
-      <li><a href="http://haml-lang.com/" target="_blank">http://haml-lang.com/</a></li>
-      <li><a href="https://github.com/hassox/warden" target="_blank">https://github.com/hassox/warden</a></li>
-      <li><a href="http://rubyinstaller.org/" target="_blank">http://rubyinstaller.org/</a></li>
+      <li><a href="http://rubyinstaller.org/" target="_blank">http://rubyinstaller.org</a></li>
+      <li><a href="http://haml-lang.com/" target="_blank">http://haml-lang.com</a></li>
       <li><a href="http://datamapper.org/" target="_blank">http://datamapper.org</a></li>
       <li><a href="http://mongoid.org" target="_blank">http://mongoid.org</a></li>
       <li><a href="http://rtomayko.github.com/shotgun" target="_blank">http://rtomayko.github.com/shotgun</a></li>
       <li><a href="https://github.com/jnunemaker/twitter" target="_blank">https://github.com/jnunemaker/twitter</a></li>
       <li><a href="https://github.com/rack/rack" target="_blank">https://github.com/rack/rack</a></li>
-      <li><a href="http://sinatra.pp.ua/" target="_blank">http://sinatra.pp.ua</a></li>
-      
-      <li><a href="https://..">..</a></li>
+      <li><a href="https://github.com/jsmestad/sinatra_warden" target="_blank">https://github.com/jsmestad/sinatra_warden</a></li>
+      <li><a href="http://sinatra.pp.ua" target="_blank">http://sinatra.pp.ua</a></li>
+      <li><a href="https://github.com/mekhovov/sinatra_presentation" target="_blank">https://github.com/mekhovov/sinatra_presentation</a></li>
+      <li><a href="http://www.htmlfivewow.com/">http://www.htmlfivewow.com</a></li>
     </ul>
   </section>
 
