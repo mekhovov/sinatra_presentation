@@ -25,17 +25,19 @@ function animate(element, anim)
 
 function lets_rock (){
 	drag_n_drop();
-	show_menu('lets_rock');
+	// show_menu('lets_rock');
     
 
   $("#lets_rock audio").remove();
-  $("#lets_rock").append('<audio autoplay controls >  <source src="audio/StoneSour-30-30-150.mp3"> </audio>').fadeIn();
+  //$("#lets_rock").append('<audio autoplay controls >  <source src="audio/StoneSour-30-30-150.mp3"> </audio>').fadeIn();
+  // $("#lets_rock").append('<audio autoplay controls >  <source src="audio/disturbed.mp3"> </audio>').fadeIn();
+  $("#lets_rock").append('<audio autoplay controls >  <source src="audio/disturbed-shout.mp3"> </audio>').fadeIn();
   $("#frank").append('<div class="guitar"></div>');
   $("#zombie").append('<div class="guitar"></div>');
   
-  $("#skeleton").css({'top' : '480px'});
-  $("#frank").css({'top' : '480px'});
-  $("#zombie").css({'top' : '480px'});
+  $("#skeleton").css({'top' : '500px'});
+  $("#frank").css({'top' : '500px'});
+  $("#zombie").css({'top' : '500px'});
   $("#zombie").css({'left' : '50px'});
   // $("article.article_skeleton").css({'background' : 'transparent url("images/skeleton/wall.png") no-repeat'});
  
