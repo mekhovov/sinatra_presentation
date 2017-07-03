@@ -14,39 +14,39 @@ header, footer, section, aside, nav, article {
 
 @font-face {
   font-family: 'burnstown_dam';
-  src: url("/fonts/burnstown_dam.otf");
+  src: url("../fonts/burnstown_dam.otf");
 }
 @font-face {
   font-family: 'GoodDog';
-  src: url("/fonts/GoodDog.otf");
+  src: url("../fonts/GoodDog.otf");
 }
 @font-face {
   font-family: '1942';
-  src: url("/fonts/1942.ttf");
+  src: url("../fonts/1942.ttf");
 }
 @font-face {
   font-family: 'DESTROY_';
-  src: url("/fonts/DESTROY_.ttf");
+  src: url("../fonts/DESTROY_.ttf");
 }
 @font-face {
   font-family: 'Ubuntu-Title';
-  src: url("/fonts/Ubuntu-Title.ttf");
+  src: url("../fonts/Ubuntu-Title.ttf");
 }
 @font-face {
   font-family: 'UglyQua';
-  src: url("/fonts/UglyQua.ttf");
+  src: url("../fonts/UglyQua.ttf");
 }
 @font-face {
   font-family: '3Dumb';
-  src: url("/fonts/3Dumb.ttf");
+  src: url("../fonts/3Dumb.ttf");
 }
 @font-face {
   font-family: '2Dumb';
-  src: url("/fonts/2Dumb.ttf");
+  src: url("../fonts/2Dumb.ttf");
 }
 @font-face {
   font-family: 'Qarmic_sans_Abridged';
-  src: url("/fonts/Qarmic_sans_Abridged.ttf");
+  src: url("../fonts/Qarmic_sans_Abridged.ttf");
 }
 
 body {
@@ -54,7 +54,7 @@ body {
 	color:#fcfcfc;
 	background-color:#355664;
 	font-family:Arial, Helvetica, sans-serif;
-  background:url("/images/bg_scene.jpg") 0;
+  background:url("../images/bg_scene.jpg") 0;
     
 }
 
@@ -117,7 +117,7 @@ p{
 }
 
 nav{
-	background:url("/images/20p-black.png") repeat; 
+	background:url("../images/20p-black.png") repeat; 
 	
 	filter:alpha(opacity=60);
 	-moz-opacity: 0.60;
@@ -188,7 +188,7 @@ nav ul li div:hover {
 	display:block;
 	position:absolute;
 	z-index:1;
- 	background:url("/images/20p-black.png") repeat;
+ 	background:url("../images/20p-black.png") repeat;
  	border:1px solid #151515;
  	/* Applying CSS3 rounded corners: */
  	-webkit-border-radius:5px;
@@ -237,7 +237,7 @@ nav, nav ul li div{
 }
 
 #intro {
-  background:url("/images/bg-intro.gif") repeat #1c1c1c;
+  background:url("../images/bg-intro.gif") repeat #1c1c1c;
   margin-bottom:50px;
   height: 150px;
 }
@@ -375,7 +375,7 @@ article .line{
 }
 	
 article{
-	/*background:url("/images/20p-black.png") repeat;*/
+	/*background:url("../images/20p-black.png") repeat;*/
 	
 
   /*border:1px solid #151515;*/
@@ -393,7 +393,7 @@ article{
 	font-size:2em;
 	padding: 10px 0;
 	margin-top: 15px;
-	background: url("/images/nav-bg.gif") repeat-x;
+	background: url("../images/nav-bg.gif") repeat-x;
 	height:36px;
 	
 	filter:alpha(opacity=80);
@@ -409,7 +409,7 @@ article{
 font-size:1.3em;
 	padding: 3px 0 3px 20px;
 	margin-top: -2px;
-	background: url("/images/20p-black.png") repeat;
+	background: url("../images/20p-black.png") repeat;
 	height:25px;
 	/* Applying CSS3 rounded corners: */
 	-moz-border-radius:10px 10px 0 0;
@@ -433,7 +433,7 @@ article header a:hover {
 	padding: 6px 12px;
 	color: #b2b2b2;
 	font-size:0.7em;
-	background: url("/images/20p-black.png") repeat;
+	background: url("../images/20p-black.png") repeat;
 	/* Applying CSS3 rounded corners: */
 	-moz-border-radius: 10px 10px;
 	-webkit-border-radius: 10px 10px;
@@ -457,17 +457,17 @@ article header a:hover {
 }
 
 .post_author {
-	background: url("/images/ico-author.png") 8px 5px no-repeat;
+	background: url("../images/ico-author.png") 8px 5px no-repeat;
 } 
 .post_tags {
-	background: url("/images/ico-tags.png")  8px 5px no-repeat;
+	background: url("../images/ico-tags.png")  8px 5px no-repeat;
 }
 .post_comments {
-	background: url("/images/ico-comments.png")  8px 5px no-repeat;
+	background: url("../images/ico-comments.png")  8px 5px no-repeat;
 }
 
 .post_category {
-	background: url("/images/ico-category.png")  8px 5px no-repeat;
+	background: url("../images/ico-category.png")  8px 5px no-repeat;
 }
 
 .read_it, .edit_it, .edit_news, .delete_it, .add_it{
@@ -494,22 +494,22 @@ article header a:hover {
 }
 
 .read_it {
-    background: url("/images/20p-black.png") repeat, url("/images/ico-read_it.png") right no-repeat;
+    background: url("../images/20p-black.png") repeat, url("../images/ico-read_it.png") right no-repeat;
     padding-right:30px;
 }
 .add_it {
-    background: url("/images/20p-black.png") repeat, url("/images/ico-add_it.png") right no-repeat;
+    background: url("../images/20p-black.png") repeat, url("../images/ico-add_it.png") right no-repeat;
     padding-right:30px;
 }
 .edit_it {
-    background: url("/images/20p-black.png") repeat, url("/images/ico-edit_it.png") center no-repeat;
+    background: url("../images/20p-black.png") repeat, url("../images/ico-edit_it.png") center no-repeat;
 }
 .edit_news{
-    background: url("/images/20p-black.png") repeat, url("/images/ico-edit_it.png") right no-repeat;
+    background: url("../images/20p-black.png") repeat, url("../images/ico-edit_it.png") right no-repeat;
      padding-right:30px;
 }
 .delete_it{
-    background: url("/images/20p-black.png") repeat, url("/images/ico-delete_it.png") center no-repeat;
+    background: url("../images/20p-black.png") repeat, url("../images/ico-delete_it.png") center no-repeat;
 }
 
 .edit_it, .delete_it{
@@ -525,23 +525,23 @@ article header a:hover {
 }
 
 .read_it:hover {
-    background: url("/images/20p-black.png") repeat, url("/images/ico-read_it.png") right no-repeat;
+    background: url("../images/20p-black.png") repeat, url("../images/ico-read_it.png") right no-repeat;
      background-color: green;
 }
 .add_it:hover {
-    background: url("/images/20p-black.png") repeat, url("/images/ico-add_it.png") right no-repeat;
+    background: url("../images/20p-black.png") repeat, url("../images/ico-add_it.png") right no-repeat;
      background-color: green;
 }
 .edit_it:hover {
-    background: url("/images/20p-black.png") repeat, url("/images/ico-edit_it.png") center no-repeat;
+    background: url("../images/20p-black.png") repeat, url("../images/ico-edit_it.png") center no-repeat;
      background-color: #6461a9;
 }
 .edit_news:hover {
-    background: url("/images/20p-black.png") repeat, url("/images/ico-edit_it.png") right no-repeat;
+    background: url("../images/20p-black.png") repeat, url("../images/ico-edit_it.png") right no-repeat;
      background-color: #6461a9;
 }
 .delete_it:hover{
-    background: url("/images/20p-black.png") repeat, url("/images/ico-delete_it.png") center no-repeat;
+    background: url("../images/20p-black.png") repeat, url("../images/ico-delete_it.png") center no-repeat;
     background-color: orange;
 }
 
@@ -570,7 +570,7 @@ article header a:hover {
 
 }
 .next_news {
-    background: url("/images/20p-black.png") repeat, url("/images/ico-next_news.png") right no-repeat;
+    background: url("../images/20p-black.png") repeat, url("../images/ico-next_news.png") right no-repeat;
     padding-right:30px;
     margin-top:20px;
 }
@@ -580,7 +580,7 @@ article header a:hover {
   -moz-opacity: 0.5;
   filter:alpha(opacity=50);
 
-     background: url("/images/20p-black.png") repeat, url("/images/ico-next_news.png") right no-repeat;
+     background: url("../images/20p-black.png") repeat, url("../images/ico-next_news.png") right no-repeat;
      background-color: green;
 }
 
@@ -599,7 +599,7 @@ article header a:hover {
 	float: left; 
 	margin-left: -10px; 
 	position: relative; 
-	background: url("/images/nav-left.png") no-repeat;
+	background: url("../images/nav-left.png") no-repeat;
 	
 	filter:alpha(opacity=80);
 	-moz-opacity: 0.80;
@@ -610,7 +610,7 @@ article header a:hover {
 	float: right; 
 	margin-right: -10px; 
 	position: relative; 
-	background: url("/images/nav-right.png") no-repeat;
+	background: url("../images/nav-right.png") no-repeat;
 	
 	filter:alpha(opacity=80);
 	-moz-opacity: 0.80;
@@ -626,7 +626,7 @@ footer{
 
     text-align:center;
     font-size:0.825em;
-    background: url("/images/dots.jpg") repeat;
+    background: url("../images/dots.jpg") repeat;
 
     opacity:0.5;
     -moz-opacity: 0.5;
@@ -661,12 +661,12 @@ footer a:hover{
 footer a.send_mail{
   float:left;
 
-background: url("/images/ico-send-mail.png") no-repeat;
+background: url("../images/ico-send-mail.png") no-repeat;
 }
 
 footer a.up{
     float:right;
-    background: url("/images/ico-go-up.png") no-repeat;
+    background: url("../images/ico-go-up.png") no-repeat;
 
 }
 
@@ -761,7 +761,7 @@ article.article_edit_news header h3 {
 	#form_edit_news fieldset textarea,
 	#form_edit_news fieldset select
 	{
-		background: transparent url("/images/ico_validation.png") 1400px 24px no-repeat;
+		background: transparent url("../images/ico_validation.png") 1400px 24px no-repeat;
 		
 		display: inline-block;
 		width: 371px;
@@ -1077,14 +1077,14 @@ margin:0 0 0 30px;
 	width: 80px;
 	height:100px;
 	left: 65px;
-	background: transparent url("/images/skeleton/s_head.png") no-repeat;
+	background: transparent url("../images/skeleton/s_head.png") no-repeat;
 	z-index:5;
 }
 .lhand{
 	width: 87px;
 	height:70px;
 	top:80px;
-	background: transparent url("/images/skeleton/s_lhand.png") no-repeat;
+	background: transparent url("../images/skeleton/s_lhand.png") no-repeat;
 	z-index:2;
 }
 .rhand{
@@ -1092,7 +1092,7 @@ margin:0 0 0 30px;
 	height:70px;
 	top: 80px;
 	left: 125px;
-	background: transparent url("/images/skeleton/s_rhand.png") no-repeat;
+	background: transparent url("../images/skeleton/s_rhand.png") no-repeat;
 	z-index:2;
 }
 .body{
@@ -1100,7 +1100,7 @@ margin:0 0 0 30px;
 	height:96px;
 	top:90px;
 	left: 70px;
-	background: transparent url("/images/skeleton/s_body.png") no-repeat;
+	background: transparent url("../images/skeleton/s_body.png") no-repeat;
 	z-index:3;
 }
 .lfoot{
@@ -1108,7 +1108,7 @@ margin:0 0 0 30px;
 	height:123px;
 	top:155px;
 	left: 60px;
-	background: transparent url("/images/skeleton/s_lfoot.png") no-repeat;
+	background: transparent url("../images/skeleton/s_lfoot.png") no-repeat;
 	z-index:2;
 }
 .rfoot{
@@ -1116,60 +1116,60 @@ margin:0 0 0 30px;
 	height:120px;
 	top:155px;
 	left: 115px;
-	background: transparent url("/images/skeleton/s_rfoot.png") no-repeat;
+	background: transparent url("../images/skeleton/s_rfoot.png") no-repeat;
 	z-index:2;
 }
 
 
 
 #frank .head{
-	background: transparent url("/images/skeleton/f_head.png") no-repeat;
+	background: transparent url("../images/skeleton/f_head.png") no-repeat;
 
 }
 #frank .lhand{
-	background: transparent url("/images/skeleton/f_lhand.png") no-repeat;
+	background: transparent url("../images/skeleton/f_lhand.png") no-repeat;
 
 	top:75px;
 	left: -7px;
 }
 #frank .rhand{
-	background: transparent url("/images/skeleton/f_rhand.png") no-repeat;
+	background: transparent url("../images/skeleton/f_rhand.png") no-repeat;
 	top:77px;
 	left: 130px;
 }
 #frank .body{
-	background: transparent url("/images/skeleton/f_body.png") no-repeat;
+	background: transparent url("../images/skeleton/f_body.png") no-repeat;
 	top:82px;
 }
 #frank .lfoot{
-	background: transparent url("/images/skeleton/f_lfoot.png") no-repeat;
+	background: transparent url("../images/skeleton/f_lfoot.png") no-repeat;
 }
 #frank .rfoot{
-	background: transparent url("/images/skeleton/f_rfoot.png") no-repeat;
+	background: transparent url("../images/skeleton/f_rfoot.png") no-repeat;
 }
 
 
 
 #zombie .head{
-	background: transparent url("/images/skeleton/z_head.png") no-repeat;
+	background: transparent url("../images/skeleton/z_head.png") no-repeat;
 }
 #zombie .lhand{
-	background: transparent url("/images/skeleton/z_lhand.png") no-repeat;
+	background: transparent url("../images/skeleton/z_lhand.png") no-repeat;
 	top:60px;
 }
 #zombie .rhand{
-	background: transparent url("/images/skeleton/z_rhand.png") no-repeat;
+	background: transparent url("../images/skeleton/z_rhand.png") no-repeat;
 	top:60px;
 }
 #zombie .body{
-	background: transparent url("/images/skeleton/z_body.png") no-repeat;
+	background: transparent url("../images/skeleton/z_body.png") no-repeat;
 	top:82px;
 }
 #zombie .lfoot{
-	background: transparent url("/images/skeleton/z_lfoot.png") no-repeat;
+	background: transparent url("../images/skeleton/z_lfoot.png") no-repeat;
 }
 #zombie .rfoot{
-	background: transparent url("/images/skeleton/z_rfoot.png") no-repeat;
+	background: transparent url("../images/skeleton/z_rfoot.png") no-repeat;
 }
 
 
