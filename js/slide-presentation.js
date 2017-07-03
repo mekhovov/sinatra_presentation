@@ -456,7 +456,8 @@ SlideManager.prototype.getBackgroundId = function(index) {
 };
 
 SlideManager.prototype.parseHistory = function() {
-  var parts = window.location.pathname.split('/slide');
+  // var parts = window.location.pathname.split('/slide');
+  var parts = window.location.href.split('#slide');
   this.current = 0;
   if (parts.length == 2) {
     this.current = parseInt(parts[1]) - 1;
@@ -469,7 +470,8 @@ SlideManager.prototype.parseHistory = function() {
 };
 
 SlideManager.prototype.setHistory = function(index) {
-  var path = '/slide' + (index + 1);
+  // var path = '/slide' + (index + 1);
+  var path = window.location.pathname + '#slide' + (index + 1);
   window.history.pushState({}, null, path);
 };
 
